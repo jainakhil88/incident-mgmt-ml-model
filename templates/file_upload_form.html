@@ -1,0 +1,33 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Incident Management</title>  
+
+    <script type="text/javascript">
+
+    function check(){
+    var file = document.getElementById('upfile');
+    console.log(file);
+    if(file.value === null || file.value === ""){
+        alert("Please select a file to upload");
+        return false;
+    }
+    else{
+        //alert('FILE IS UPLOADED');
+        return true;
+    }
+    }
+
+    </script>
+
+
+</head>  
+<body>  
+
+    <form action = "/predict" method = "post" enctype="multipart/form-data"> 
+         
+        <input id="upfile" type="file" name="file" accept=".csv,.txt"/>  
+        <input type = "submit" value="Upload"  onclick="return check();">  
+    </form>  
+</body>  
+</html>  
